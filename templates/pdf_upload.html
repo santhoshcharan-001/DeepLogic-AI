@@ -1,0 +1,46 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block content %} 
+
+<link rel="stylesheet" href="{% static 'css/pdfs.css' %}">
+
+
+<form action="" method="POST" id="upload-form" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="pdf">Upload PDF:</label>
+    <br>
+    <input type="file" name="pdf" id="pdf" accept=".pdf" style="margin-top:15px;" required>
+    <input type="submit" value="Upload">
+</form>
+    
+<script>
+$(document).ready(function() {
+  $("#upload-form").submit(function(e) {
+    $(".loading").removeClass("hide");
+    e.preventDefault();
+    var formData = new FormData($(this)[0]);
+    
+    $.ajax({
+     type: "POST",
+      url: window.location.pathname,
+      data: formData,
+      processData: false,
+      contentType: false,
+      cache: false,
+      success: function(data) {
+        console.log(data);
+        if(data.success) {
+          window.location.href = data.redirect_url;
+        }
+        $(".loading").addClass("hide");
+       },
+        error: function(err) {
+            console.log(err);
+            $(".loading").addClass("hide");
+        }
+    })
+  })
+  return false;
+})
+</script>
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block content %} 
+
+<link rel="stylesheet" href="{% static 'css/pdfs.css' %}">    
+
+<table align="center">
+    <tr>
+        <th>S.no</th>
+        <th>PDF</th>
+        <th>Download</th>
+    </tr>
+    {% for pdf in pdfs %}
+    <tr>
+        <td><a href="/pdfs/{{pdf.id}}/">{{ forloop.counter }}</a></td>
+        <td><a href="/pdfs/{{pdf.id}}/">{{ pdf.get_file_name }}</a></td>
+        <td><a href="{{ pdf.pdf.url }}" target="_blank">Download</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock content %}

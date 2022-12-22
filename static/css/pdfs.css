@@ -1,0 +1,73 @@
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    font: inherit;
+    margin: 5px 0;
+    background: #333;
+    color: #FFF;
+    border: 0;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+table td,
+table th {
+    text-align: center;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    font: inherit;
+    margin: 5px 0;
+    background: #333;
+    color: #FFF;
+    border: 0;
+    margin-top: 1rem;
+}
+
+table th {
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+table td a {
+    color: #FFF;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+
+/* Detail View Styling */
+.pdf-container {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+.pdf-container .text-field {
+    color: #FFF;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.pdf-container .text-field.description {
+    line-height: 1.8;
+    padding: 15px 20px;
+}
+
+.pdf-container a {
+    color: #FFF;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid #CCC;
+    width: fit-content;
+    border-radius: 4px;
+}

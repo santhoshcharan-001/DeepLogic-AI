@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block content %} 
+{% if request.user.is_authenticated %}
+<h1>Welcome {{ request.user.username }}</h1>
+
+<div style="margin-top:30px;">
+    <a class="btn" href="/pdfs/">View Your PDF Files</a>
+    <a class="btn" href="/pdfs/upload/">Upload a PDF File</a>
+</div>
+{% else %}
+<p>Please login or signup to upload PDF Files</p>
+{% endif %} {% endblock content %}

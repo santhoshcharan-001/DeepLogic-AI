@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(to right top, #615daa, #6ea0d3);
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 150px 0 50px;
+}
+
+nav {
+    background-color: #fff;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+nav h1 {
+    font-weight: 200;
+}
+
+nav .main-link {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
+
+nav .nav-links a {
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #331391;
+    font-weight: 700;
+}
+
+nav .nav-links a.color-bg {
+    background-color: #331391;
+    color: #fff;
+    font-weight: 400;
+}
+
+.messages {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.messages .message {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.message.message-success {
+    background-color: #27ae60;
+}
+
+.message.message-error {
+    background-color: #c0392b;
+}
+
+.messages .message span {
+    display: inline-block;
+    margin-left: 20px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: #331391;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.loading {
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading.hide {
+    display: none;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

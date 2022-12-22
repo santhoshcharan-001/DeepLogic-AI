@@ -1,0 +1,21 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block content %} 
+
+<link rel="stylesheet" href="{% static 'css/pdfs.css' %}">
+<div class="pdf-container">
+    <p>Name :</p>
+    <div class="text-field">
+        {{ pdf.get_file_name }}
+    </div>
+    <p>Text :</p>
+    <pre class="text-field description">
+        {% if pdf.text %}
+            {{ pdf.text }}
+        {% endif %}
+    </pre>
+    <a href="{{ pdf.pdf.url }}">Download</a>
+</div>
+
+
+{% endblock content %}

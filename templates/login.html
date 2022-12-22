@@ -1,0 +1,18 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block content %} 
+
+<link rel="stylesheet" href="{% static 'css/auth.css' %}">
+
+<form action="" method="POST">
+    <h2>Login</h2>
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" placeholder="username" required/>
+    <label for="password">Password: </label>
+    <input type="password" name="password" id="password" placeholder="password" required/>
+    <input type="submit" value="Login" />
+</form>
+
+
+{% endblock content %}
