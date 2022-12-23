@@ -1,5 +1,7 @@
 # DeepLogic-AI
 
+Link to the demonstration of the project- https://drive.google.com/file/d/1-I8Nv64-p5_-U_EL9dXnrG3p0bz66pHB/view?usp=sharing
+
 According to the problem statement, we have to enable the new users to get registered. 
 After registering, users can get logged into the application and then they will have two options such as: 
 1. Upload a pdf to extract the text in it.
